@@ -11,12 +11,12 @@
 <body>
 
 <div x-data="{
-    name: 'arunfung',
-    say(){
-        return 'arunfung.com'
+    title: '',
+    init() {
+        this.title = 'I am Arun' + 'Fung'
     }
  }">
-    <h1 x-text="say()"></h1>
+    <h1 x-text="title"></h1>
 </div>
 </body>
 </html>
