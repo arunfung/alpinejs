@@ -14,9 +14,20 @@
     title: '',
     init() {
         this.title = 'I am Arun' + 'Fung'
+        this.post.title = 'https://arunfung.com'
+        this.loaded = true
+    },
+    post : {
+        title: ''
+    },
+    loaded: false,
+    getPost(){
+        this.post.title = 'https://blog.arunfung.com'
     }
  }">
     <h1 x-text="title"></h1>
+    <h2 x-text="post.title" x-show="loaded"></h2>
+    <button x-on:click="getPost()">获取博客</button>
 </div>
 </body>
 </html>
