@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+<form x-on:submit.prevent="chose()" x-data="{
+  month:'',
+  chose (){
+    console.log(this.month)
+  }
+}">
+
+    <input type="radio" value="1" x-model="month">一月
+    <input type="radio" value="2" x-model="month">二月
+    <button>选择</button>
+</form>
+
+</body>
+</html>
