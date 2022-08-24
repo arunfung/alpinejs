@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
@@ -12,7 +12,8 @@
 <form x-on:submit.prevent="login()" x-data="{
   form:{
     email:'',
-    password:''
+    password:'',
+    remember:false
   },
   login(){
     console.log(this.form)
@@ -20,6 +21,7 @@
 }">
   <input type="email" placeholder="email" x-model="form.email">
   <input type="password" placeholder="password" x-model="form.password">
+    <input type="checkbox" x-model="form.remember">记住我
   <button>Login</button>
 </form>
 
