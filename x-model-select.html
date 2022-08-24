@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+<form x-on:submit.prevent="chose()" x-data="{
+  month:'',
+  chose (){
+    console.log(this.month)
+  }
+}">
+
+    <select x-model="month">
+        <option value="">选择月份</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>
+    <button>确定</button>
+</form>
+
+</body>
+</html>
