@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:x-on="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+<form x-on:submit.prevent="deleteUsers()" x-data="{
+  users:[],
+  deleteUsers (){
+    console.log(this.users)
+  }
+}">
+
+    <input type="checkbox" value="1" x-model="users">小红
+    <input type="checkbox" value="2" x-model="users">小明
+    <input type="checkbox" value="3" x-model="users">小张
+    <input type="checkbox" value="4" x-model="users">小丽
+  <button>Delete</button>
+</form>
+
+</body>
+</html>
